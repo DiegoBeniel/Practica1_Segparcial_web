@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzhino</title>
+  <!-- Link de bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" >
+</head>
+<body>
+  <header class="d-flex align-items-center gap-2">
+    <div class="logo_encabezado">
+      <img src="imagen_logo_pizzhino.png" alt="Logo Pizzhino" />
+    </div>
+    
+    <span class="nombre_titulo text-white">PIZZHINO</span>
+
+    <button class="btn_opciones ms-auto" id="btnMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div id="overlay"></div>
+  
+  <!-- sección semántica (barra lateral)-->
+  <nav id="barra">
+    <div class="barra_lateral">Opciones</div>
+    <!--  # hace scroll hasta el elemento con ese id en la misma página-->
+    <a href="#inicio" class="activo" data-seccion="inicio">Inicio</a>
+    <a href="#menu" data-seccion="menu">Menú</a>
+    <a href="#nosotros" data-seccion="nosotros">Nosotros</a>
+    <a href="#contacto" data-seccion="contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <section id="inicio" class="d-flex flex-column align-items-center text-center">
+      <div class="inicio_logo">
+        <img src="imagen_logo_pizzhino.png" alt="El Pizzhino Pizzería" />
+      </div>
+      <p class="inicio_frase">LA PIZZA QUE TE ENAMORARÁ AL PRIMER MORDISCO</p>
+      <div class="inicio_info">
+        <h3>¿Dónde?</h3>
+        <p>C. Nueva Escocia 1885, Providencia 5a Secc.,44638 Guadalajara, Jal.</p>
+      </div>
+      <div class="inicio_info">
+        <h3>¿Por qué?</h3>
+        <ul>
+          <li>Masa madre de 48 horas de reposo</li>
+          <li>Ingredientes locales</li>
+          <li>Llenas de amor</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Menú
+           col-12 = 1 columna  en celular (< 576px)
+           col-sm-6 = 2 columnas en tablet (576px – 991px)
+           col-lg-3 = 4 columnas en laptop/PC (≥ 992px) -->
+    <section id="menu">
+      <h2 class="subtitulos">Menú:</h2>
+      <div class="row g-3">
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="imagen_pizza">
+            <img src="imagen_pepperoni.png" alt="Pepperoni" />
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="imagen_pizza">
+            <img src="imagen_margarita.png" alt="Margherita" />
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="imagen_pizza">
+            <img src="imagen_champiñones.png" alt="Champiñones" />
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="imagen_pizza">
+            <img src="imagen_salchicha.png" alt="Salchicha" />
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="imagen_pizza">
+            <img src="imagen_hawaiana.png" alt="Hawaiana" />
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="imagen_pizza">
+            <img src="imagen_quesocabra.png" alt="Queso de Cabra" />
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="imagen_pizza">
+            <img src="imagen_verduras.png" alt="Verduras" />
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="imagen_pizza">
+            <img src="imagen_chile.png" alt="Chiles" />
+          </div>
+        </div>
+      </div>  
+    </section>
+
+    <section id="nosotros" class="d-flex flex-column align-items-center text-center">
+      <h2 class="subtitulos">Sobre Nosotros:</h2>
+      <div class="foto_trabajadores">
+        <img src="imagen_local.png" alt="Local Pizzhino" />
+      </div>
+      <p class="texto_trabajadores">
+        Desde 1987, la familia Pizzhino lleva a tu mesa la verdadera pizza napolitana.
+        Don Enzo Ferrari trajo la receta original desde los Nápoles para el mundo y hoy sus hijos continúan la tradición.
+      </p>
+    </section>
+
+
+    <section id="contacto">
+      <h2 class="subtitulos">Contacto:</h2>
+      <div class="seccion_contacto">
+        <div class="contacto_elementos">
+          <h3>Dirección:</h3>
+          <p>C. Nueva Escocia 1885, Providencia 5a Secc., 44638 Guadalajara, Jal.</p>
+          <a href="https://maps.google.com/?q=C.+Nueva+Escocia+1885,+Guadalajara,+Jalisco" target="_blank">
+            <img src="imagen_mapa.png" alt="Ver en Google Maps" /></a>
+          </div>
+        <div class="contacto_elementos">
+          <h3>Teléfono:</h3>
+          <p>3314053018</p>
+        </div>
+        <div class="contacto_elementos">
+          <h3>Redes sociales:</h3>
+          <p>@pizzhino.gdl</p>
+        </div>
+        <div class="contacto_elementos">
+          <h3>Correo:</h3>
+          <p>lasmejorespizzas@pizzhino.mx</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center">
+    2026 PIZZHINO
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js""></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
