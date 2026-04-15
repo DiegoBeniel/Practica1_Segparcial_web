@@ -8,7 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Encabezado */
 header {
   position: fixed;
   top: 0;
@@ -123,10 +122,17 @@ main {
 section {
   padding: 40px 50px 60px;
   scroll-margin-top: calc(60px + 10px);
+  border-bottom: 10px solid #D32F2F;
+  position: relative;
+}
+
+section:last-of-type {
+  border-bottom: none;
 }
 
 .subtitulos {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  font-style: italic;
   font-weight: 700;
   color: #C0392B;
   margin-bottom: 25px;
@@ -136,11 +142,11 @@ footer {
   margin-left: 180px;
 }
 
-/* Inicio*/
 #inicio {
   gap: 16px;
   min-height: calc(100vh - 60px);
   justify-content: center;
+  
 }
 
 .inicio_logo {
@@ -187,7 +193,6 @@ footer {
   padding-left: 18px;
 }
 
-
 /* Menu */
 .imagen_pizza {
   border: 3px solid #D32F2F;
@@ -208,9 +213,10 @@ footer {
   display: block;
 }
 
-/* Nosotros */
 #nosotros {
   gap: 20px;
+  background: #f3d5a4b6;
+  border-radius: 0;
 }
 
 .foto_trabajadores {
@@ -228,14 +234,12 @@ footer {
 }
 
 .texto_trabajadores {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: #C0392B;
-  line-height: 1.7;
+  line-height: 1.2;
   max-width: 520px;
 }
 
-
-/* Contacto */
 .seccion_contacto {
   display: flex;
   flex-direction: column;
@@ -267,7 +271,6 @@ footer {
   border-color: #FFD54F;
   opacity: 0.85;
 }
-
 
 footer {
   background: #1A1A1A;
@@ -309,7 +312,6 @@ footer {
     padding: 30px 24px 50px;
   }
 }
-
 
 /* Media Query - celular */
 @media (max-width: 575px) {
